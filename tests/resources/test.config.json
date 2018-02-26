@@ -1,0 +1,19 @@
+{
+  "transports": [
+    {
+      "name": "console"
+    },
+    {
+      "name": "file",
+      "props": {
+        "level": "info"
+      }
+    },
+    {
+      "name": "daily-rotate-file",
+      "props": {
+        "level": "info"
+      }
+    }
+  ]
+}
