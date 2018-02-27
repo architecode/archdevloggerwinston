@@ -1,5 +1,5 @@
 export interface ILogTransporters {
-  transport?: string;
+  transporter?: string;
   module?: string;
   properties?: any;
 }

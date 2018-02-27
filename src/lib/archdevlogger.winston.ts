@@ -6,8 +6,8 @@ const Winston = require("winston");
 export class ArchDevLoggerWinston extends ArchDevLogger.ExtensibleLogger {
   private Logger: any;
 
-  configure(properties: ArchDevLoggerWinstonProperties, name: string, type: string) {
-    super.configure(properties, name, type);
+  configure(name: string, type: string, logger: string, properties: ArchDevLoggerWinstonProperties) {
+    super.configure(name, type, logger, properties);
 
     const options = CreateOptionsResolve(this, properties);
     Object.defineProperties(this, {

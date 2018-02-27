@@ -1,4 +1,4 @@
-import { ILogFormatter } from "../core";
+import { IFormatter } from "../core/iformatter";
 
 export type CommonLogOptsType = {
   name: string;
@@ -7,7 +7,7 @@ export type CommonLogOptsType = {
   time: string;
 };
 
-export const CommonLogFormatter: ILogFormatter<CommonLogOptsType> = {
+export const CommonLogFormatter: IFormatter<CommonLogOptsType> = {
   format: (logObj, opts) => {
     logObj.name = opts.name;
     logObj.hostname = opts.hostname;
@@ -17,7 +17,8 @@ export const CommonLogFormatter: ILogFormatter<CommonLogOptsType> = {
     return logObj;
   },
   opts: (logger) => ({
-    name: logger.Headers.Author,
+    name: logger.Headers.Logger,
+    author: logger.Headers.Author,
     hostname: logger.Headers.hostname(),
     pid: logger.Headers.pid(),
     time: logger.Headers.timestamp()

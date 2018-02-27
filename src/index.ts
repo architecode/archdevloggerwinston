@@ -1,12 +1,9 @@
-import { CommonLogFormatter } from "./lib/formatters";
-import { Transporters } from "./lib/transporters";
-import { ArchDevLoggerWinston, ArchDevLoggerWinstonProperties } from "./lib";
+import { ArchDevLoggerWinston } from "./lib";
 
-export { ArchDevLoggerWinstonProperties } from "./lib";
-export { ICreateOptions, ILogFormatter, ILogTransporters } from "./lib/core";
+export { ICreateOptions, IFormatter, ILogFormatter, ILogTransporters } from "./lib/core";
+export { FormattersFactory, TransportsFactory } from "./lib/factories";
+export { Formatters, CommonLogFormatter } from "./lib/formatters";
+export { Transporters } from "./lib/transporters";
+export { ArchDevLoggerWinston, ArchDevLoggerWinstonProperties } from "./lib";
 
 module.exports = ArchDevLoggerWinston;
-module.exports.Formatters = {
-  CommonLogFormatter
-};
-module.exports.Transporters = Transporters;

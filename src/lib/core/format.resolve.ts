@@ -1,8 +1,8 @@
 import { ArchDevLoggerWinston } from "../archdevlogger.winston";
-import { ILogFormatter } from "./ilog.formatter";
+import { IFormatter } from "./iformatter";
 const Winston = require("winston");
 
-export const FormatFactory = (logger: ArchDevLoggerWinston, formatters: ILogFormatter[] = []) => {
+export const FormatResolve = (logger: ArchDevLoggerWinston, formatters: IFormatter[] = []) => {
   const formats = formatters.map(formatter =>
     Winston.format(formatter.format)(formatter.opts(logger)));
 
