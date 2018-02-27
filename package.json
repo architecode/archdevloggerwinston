@@ -1,6 +1,6 @@
 {
   "name": "archdevloggerwinston",
-  "version": "2.0.0-alpha.9",
+  "version": "2.0.0-alpha.10",
   "description": "Architecode Logging Service with Extensible Logger Library using Winston",
   "main": "./dst/index.js",
   "typings": "./typings/index.d.ts",
