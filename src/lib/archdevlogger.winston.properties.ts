@@ -1,9 +1,9 @@
 import { LogProperties } from "archdevlogger";
-import { ICreateOptions, ILogFormatter, ILogTransporters } from "./core";
+import { ICreateOptions, ILogFormatter, ILogTransporter } from "./core";
 
 export interface ArchDevLoggerWinstonProperties extends LogProperties {
   level?: string;
   formatters?: ILogFormatter[];
-  transporters?: ILogTransporters[];
+  transporters?: ILogTransporter[];
   createOptions?: ICreateOptions;
 }

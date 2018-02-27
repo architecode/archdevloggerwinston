@@ -10,7 +10,7 @@ export const FormattersFactory = (formatters: ILogFormatter[] = []): IFormatter[
     } else if (each.formatter) {
       Formatter = Formatters.get(each.formatter);
     } else {
-      throw new Error("INVALIDFORMATTER: Formatter must have 'module' or 'transport' properties");
+      throw new Error("INVALIDFORMATTER: Formatter must have 'module' or 'formatter' properties");
     }
 
     return Formatter;
