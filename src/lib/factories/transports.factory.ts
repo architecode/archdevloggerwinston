@@ -1,5 +1,6 @@
 import { ILogTransporter } from "../core/ilog.transporter";
 import { Transporters } from "../transporters";
+import { InvalidTransporterError } from "../errors";
 
 export const TransportsFactory = (transporters: ILogTransporter[] = []): any[] =>
   transporters.map(each => {
@@ -10,7 +11,7 @@ export const TransportsFactory = (transporters: ILogTransporter[] = []): any[] =
     } else if (each.transporter) {
       Transporter = Transporters.get(each.transporter);
     } else {
-      throw new Error("INVALIDTRANSPORTER: Transporter must have 'module' or 'transporter' properties");
+      throw new InvalidTransporterError();
     }
 
     return new Transporter(each.properties);

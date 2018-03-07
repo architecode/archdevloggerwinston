@@ -1,5 +1,6 @@
 import { IFormatter, ILogFormatter } from "../core";
 import { Formatters } from "../formatters";
+import { InvalidFormatterError } from "../errors";
 
 export const FormattersFactory = (formatters: ILogFormatter[] = []): IFormatter[] =>
   formatters.map(each => {
@@ -10,7 +11,7 @@ export const FormattersFactory = (formatters: ILogFormatter[] = []): IFormatter[
     } else if (each.formatter) {
       Formatter = Formatters.get(each.formatter);
     } else {
-      throw new Error("INVALIDFORMATTER: Formatter must have 'module' or 'formatter' properties");
+      throw new InvalidFormatterError();
     }
 
     return Formatter;

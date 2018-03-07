@@ -17,10 +17,10 @@ export const CommonLogFormatter: IFormatter<CommonLogOptsType> = {
     return logObj;
   },
   opts: (logger) => ({
-    name: logger.Headers.Logger,
-    author: logger.Headers.Author,
-    hostname: logger.Headers.hostname(),
-    pid: logger.Headers.pid(),
-    time: logger.Headers.timestamp()
+    name: logger.Metadata.Logger,
+    author: logger.Metadata.Author,
+    hostname: logger.Metadata.hostname(),
+    pid: logger.Metadata.pid(),
+    time: logger.Metadata.timestamp()
   })
 };

@@ -3,7 +3,7 @@ import { ArchDevLoggerWinstonProperties } from "./archdevlogger.winston.properti
 import { CreateOptionsResolve } from "./core";
 const Winston = require("winston");
 
-export class ArchDevLoggerWinston extends ArchDevLogger.ExtensibleLogger {
+export class ArchDevLoggerWinston extends ArchDevLogger.ExtensibleLogger<ArchDevLoggerWinstonProperties> {
   private Logger: any;
 
   configure(name: string, type: string, logger: string, properties: ArchDevLoggerWinstonProperties) {
