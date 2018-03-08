@@ -20,13 +20,27 @@ logger.log('info', 'message');
 
 ```TypeScript
 const LoggerProperties = {
-  level: string,
+  level: string;
   levels: {
-    [level: string]: number
-  },
+    [level: string]: number;
+  };
   formatters: {
-    formater: string;
-    module: string;
-  }[]
+    formatter?: string;
+    module?: { type: string; resource: string; options?: any; };
+  }[];
+  transporters: {
+    transporter?: string;
+    module?: { type: string; resource: string; options?: any; };
+    properties?: any;
+  }[];
+  createOptions: {
+    level?: string;
+    levels?: {
+      [level: string]: number;
+    };
+    format?: any;
+    transports?: any[];
+    exitOnError?: boolean;
+  };
 };
 ```
