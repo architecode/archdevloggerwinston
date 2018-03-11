@@ -4,7 +4,9 @@ Logging Service with Extensible Logger Library using [Winston](https://github.co
 
 ## Overview
 
-## Usage
+
+
+## Usages
 
 #### Logger (using Winston)
 
@@ -12,6 +14,7 @@ Logging Service with Extensible Logger Library using [Winston](https://github.co
 const Logger = require('archdevloggerwinston');
 
 const properties = {...};
+
 const logger = new Logger('name', 'type', 'logger', properties);
 logger.log('info', 'message');
 ```
@@ -24,6 +27,7 @@ const LoggerProperties = {
   levels: {
     [level: string]: number;
   };
+  metadata: any;
   formatters: {
     formatter?: string;
     module?: { type: string; resource: string; options?: any; };
@@ -44,3 +48,10 @@ const LoggerProperties = {
   };
 };
 ```
+
++ **level** - defines **level** applied logger instance
++ **levels** - defines all **levels** of logger instance
++ **metadata** - defines **metadata** of logger instance
++ **formatters** - defines an array of **formatters** that create format in logger instance
++ **transporters** - defines an array of **transporters** that provide transports in logger instance
++ **createOptions** - defines **options** to create a logger instance
