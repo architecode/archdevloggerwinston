@@ -20,7 +20,18 @@ export class ArchDevLoggerWinston extends ArchDevLogger.ExtensibleLogger<ArchDev
     });
   }
 
-  log(level: string, message: string, data?: any) {
+  log(obj: any) {
+    if (obj.level && obj.message) {
+      this.Logger.log(obj);
+    } else {
+      const level = obj.level || "info";
+      const logObj = Object.assign({ level }, obj);
+
+      this.Logger.log(logObj);
+    }
+  }
+
+  logFormat(level: string, message: string, data?: object) {
     this.Logger.log(level, message, data);
   }
 }
