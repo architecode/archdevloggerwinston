@@ -1,8 +1,8 @@
 import { ArchDevLoggerWinston } from "./lib";
 import { InvalidFormatterError, InvalidTransporterError } from "./lib/errors";
 import { FormattersFactory, TransportsFactory } from "./lib/factories";
-import { Formatters } from "./lib/formatters";
-import { Transporters } from "./lib/transporters";
+import { Formatters, DefinedFormatters } from "./lib/formatters";
+import { Transporters, DefinedTransporters } from "./lib/transporters";
 
 export { ICreateOptions, IFormatter, ILogFormatter, ILogTransporter } from "./lib/core";
 export { ArchDevLoggerWinstonProperties } from "./lib";
@@ -17,4 +17,6 @@ module.exports.Factories = {
   TransportsFactory,
 };
 module.exports.Formatters = Formatters;
+module.exports.DefinedFormatters = DefinedFormatters;
 module.exports.Transporters = Transporters;
+module.exports.DefinedTransporters = DefinedTransporters;
