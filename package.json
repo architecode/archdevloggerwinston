@@ -1,6 +1,6 @@
 {
   "name": "archdevloggerwinston",
-  "version": "2.0.0-alpha.16",
+  "version": "2.0.0-alpha.17",
   "description": "Architecode Logging Service with Extensible Logger Library using Winston",
   "main": "./dst/index.js",
   "typings": "./typings/index.d.ts",
@@ -26,8 +26,8 @@
   "license": "Architecode Software License",
   "repository": "git+https://github.com/architecode/archdevloggerwinston",
   "dependencies": {
-    "archdevlogger": "^2.0.0-alpha.37",
-    "winston": "^3.0.0-rc1",
+    "archdevlogger": "^2.0.0-alpha.38",
+    "winston": "^3.0.0-rc3",
     "winston-daily-rotate-file": "^2.0.0-rc.6"
   },
   "devDependencies": {
